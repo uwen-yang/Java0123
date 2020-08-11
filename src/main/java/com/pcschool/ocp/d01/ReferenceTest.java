@@ -6,5 +6,13 @@ public class ReferenceTest {
         String s2 = s1;
         System.out.println(s1);
         System.out.println(s2);
+        
+        String s3 = "Hello";
+        append(s3);
+    }
+    
+    public static void append(String s) { //相當於 s = s3
+        s = s + "Java";
+        System.out.println(s);
     }
 }
