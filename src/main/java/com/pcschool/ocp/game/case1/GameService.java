@@ -1,5 +1,6 @@
-package com.pcschool.ocp.game;
+package com.pcschool.ocp.game.case1;
 
+import com.pcschool.ocp.game.case1.English;
 import java.util.Scanner;
 
 
