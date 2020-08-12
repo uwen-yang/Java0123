@@ -7,7 +7,7 @@ public class Number {
     private int count;
     public int check(int userAns) {
         count++;
-        return userAns - userAns;
+        return userAns - ans;
     }
     public int getCount(){
         return count;

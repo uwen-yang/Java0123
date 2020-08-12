@@ -35,7 +35,7 @@ public class JavaGame {
 
     }
 
-    public static void englishGameLoop() {
+    public static void numberGameLoop() {
         Number number = new Number();
         while (true) {
             Scanner sc = new Scanner(System.in);
@@ -50,7 +50,7 @@ public class JavaGame {
         }
     }
 
-    public static void numberGameLoop() {
+    public static void englishGameLoop() {
         English english = new English();
         while (true) {
             Scanner sc = new Scanner(System.in);
