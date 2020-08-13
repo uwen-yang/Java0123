@@ -11,9 +11,7 @@ public class Student {
         this.bmi = bmi;
     }
 
-    Student(String name, int age, BMI bmi) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     public String toString() {
