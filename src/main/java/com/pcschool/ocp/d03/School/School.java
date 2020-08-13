@@ -27,5 +27,10 @@ public class School {
         for (Student student : students) {
             System.out.println(student);
         }
+        for (int i = 0; i < students.length; i++) {
+            Student s1 = students[i];
+            Student s2 = students[i + 1];
+
+        }
     }
 }
