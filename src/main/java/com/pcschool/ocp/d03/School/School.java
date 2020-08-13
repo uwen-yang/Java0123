@@ -21,7 +21,7 @@ public class School {
             //建立Student物件
             Student student = new Student(name, age, bmi);
             //置入資料
-            System.out.println(student);
+            students[i] = student;
         }
         //列印 students
         for (Student student : students) {
