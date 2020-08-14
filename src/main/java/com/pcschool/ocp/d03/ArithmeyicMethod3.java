@@ -1,7 +1,29 @@
 package com.pcschool.ocp.d03;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
+public class ArithmeyicMethod3 {
+    public static void main(String[] args) {
+        BMI[] bmis = {
+            new BMI(170.0, 60.0), 
+            new BMI(160.0, 60.5), 
+            new BMI(185.0, 65.5),
+        };
+        
+        //Java 8
+        Arrays.stream(bmis).forEach(b -> System.out.println(b));
+        System.out.println("---------------------------------");
+        Arrays.stream(bmis)
+                .filter(b -> b.getValue() >= 18 && b.getValue() <= 23)
+                .forEach(b -> System.out.println(b));
+        System.out.println("---------------------------------");
+        Arrays.stream(bmis)
+                .sorted(Comparator.comparing(BMI::getValue))
+                .forEach(b -> System.out.println(b));
+        
+    }
+}
 
 class BMI{
     private double h;
@@ -31,16 +53,4 @@ class BMI{
         return "BMI{" + "h=" + h + ", w=" + w + ", value=" + value + '}';
     }
     
-}
-
-
-public class ArithmeyicMethod3 {
-    public static void main(String[] args) {
-        double[][] bmis = {{170.0, 60.0},{160.0,65.0},{185.0, 65.5}};
-        //Java 8
-        Arrays.stream(bmis).forEach(b -> System.out.println(b));
-        
-        
-        
-    }
 }
