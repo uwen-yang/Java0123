@@ -1,7 +1,7 @@
 package com.pcschool.ocp.exam;
 
 public class Test2 {
-    String s;
+    String s;//String 不可變
     public Test2(String s) {
         this.s = s.concat("8");
     }

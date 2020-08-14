@@ -1,7 +1,7 @@
 package com.pcschool.ocp.exam;
 
 public class Test3 {
-    StringBuilder s;
+    StringBuilder s;//StringBuilder 可變
     public Test3(StringBuilder s) {
         this.s = s.append("8");
     }
