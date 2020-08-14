@@ -12,3 +12,5 @@ public class Test3 {
         System.out.println(t2.s);
     }
 }
+//static 裡不能出現 this & super
+//this & super不會同時出現
