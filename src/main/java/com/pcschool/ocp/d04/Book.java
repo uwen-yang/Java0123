@@ -8,6 +8,9 @@ public class Book {
     }
 
     public Book(int pages) {
+        if(pages > 0 && pages < this.pages) {
+            this.pages = 200;
+        }
     }
 
     @Override
