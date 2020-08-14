@@ -3,9 +3,18 @@ package com.pcschool.ocp.d04;
 import java.util.Random;
 
 public class Food {
-
+    static String name;
     private int amount = 100;
     private int price;
+    
+    static {
+        int n = new Random().nextInt(10);
+        if(n % 2 == 0)
+            name = "可樂";
+        else
+            name = "糖水";
+    }
+    
      //物件初始區段
     {
         int n = new Random().nextInt(10);
