@@ -1,6 +1,6 @@
 package com.pcschool.ocp.d08.case1;
  //約克夏
-public class Yorkshire implements Puppy{
+public class Yorkshire implements Pet{
 
     @Override
     public void eat() {
@@ -10,6 +10,5 @@ public class Yorkshire implements Puppy{
     @Override
     public void skill() {
         System.out.println("握手");
-    }
-   
+    }  
 }
