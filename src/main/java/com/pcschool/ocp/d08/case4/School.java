@@ -1,6 +1,7 @@
 package com.pcschool.ocp.d08.case4;
 
 import java.util.Arrays;
+import jdk.nashorn.internal.objects.NativeArray;
 
 public class School {
 
@@ -29,10 +30,14 @@ public class School {
         double salaryAvg = Arrays.stream(persons)
                             .filter(p -> p instanceof Teacher)
                             .map(p -> (Teacher) p)
+                            //.peek(System.out::println)
                             .mapToInt(t -> t.getSalary().getMoney())
                             .average().getAsDouble();
         System.out.printf("老師平均薪資: %.2f\n", salaryAvg);
         //將名字中有"2"的人列出
-        
+       // Arrays.syream(person).forEach(p -> System.out.println(p));
+        Arrays.stream(persons)
+                .filter(p -> p.getName().contains("2"))
+                .forEach(System.out::println);
     }
 }
