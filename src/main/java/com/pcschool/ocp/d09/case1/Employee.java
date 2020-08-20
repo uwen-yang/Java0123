@@ -12,20 +12,25 @@ public class Employee {
         public void program() {
             String name = "寫程式";
             System.out.println(name + ":" + this.name);
+         Study study = new Study();
+
+        study.read ();
         }
 
         public void meeting() {
             String name = "開會";
             System.out.println(name + ":" + this.name);
         }
+       
     }
 
     //一般內部類別
-    class Study {
+    private class Study {
 
         public void read() {
             String appName = "美食 App";
             int hours = 60;
+            hours = 50;
             System.out.println("進修時間:" + hours + "hr");
             //方法內部類別
             class App {
