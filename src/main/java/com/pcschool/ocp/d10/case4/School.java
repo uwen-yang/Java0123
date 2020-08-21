@@ -28,9 +28,10 @@ public class School {
         
         //以每人的最高分來求平均?
         double avg = students.stream()
-                             .mapToInt(s -> s.getExams().stream().mapToInt(e -> e.getScore()).summaryStatistics().getMax())
-                             .average()
-                             .getAsDouble();
+                             .mapToInt(s -> s.getExams().stream()                                      //[80, 90, 70]Integer[]
+                                             .mapToInt(e -> e.getScore()).summaryStatistics().getMax())//[80, 90, 70] int[]
+                                             .average()                                                //統計運算
+                                             .getAsDouble();                                           //90
         System.out.println(avg);
         
         //在 Exam 中取出最高分的方法
