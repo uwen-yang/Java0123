@@ -24,7 +24,6 @@ public class SetDemo {
         s3.add(90);
         s3.add(80);
         System.out.println(s3);
-        
     }
 
 }
