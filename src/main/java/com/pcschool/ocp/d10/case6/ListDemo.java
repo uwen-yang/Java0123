@@ -1,5 +1,5 @@
 package com.pcschool.ocp.d10.case6;
-
+//佇列
 import java.util.LinkedList;
 import java.util.List;
 
