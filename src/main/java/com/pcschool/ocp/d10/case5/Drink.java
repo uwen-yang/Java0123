@@ -32,6 +32,6 @@ public class Drink implements Comparable<Drink>{
 
     @Override
     public int compareTo(Drink other) {
-        return other.prices - prices;
+        return prices - other.prices;
     }
 }
