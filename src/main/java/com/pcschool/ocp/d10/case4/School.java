@@ -3,7 +3,7 @@ package com.pcschool.ocp.d10.case4;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.function.ToIntFunction;
-import java.util.stream.Stream;
+
 
 public class School {
     public static void main(String[] args) {
