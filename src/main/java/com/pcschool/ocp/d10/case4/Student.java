@@ -1,9 +1,10 @@
 package com.pcschool.ocp.d10.case4;
 
 import java.util.LinkedHashSet;
+import java.util.Objects;
 import java.util.Set;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private Set<Exam> exams;
 
@@ -38,4 +39,20 @@ public class Student {
     public String toString() {//封裝
         return "Student{" + "name=" + name + ", scores=" + exams + '}';
     } 
+
+    public int comparTo(Student other) {
+        double avg = this.exams.stream().mapToInt(e -> e.getScore()).average().getAsDouble();
+        double avg_other = other.exams.stream().mapToInt(e -> e.getScore()).average().getAsDouble();
+        return(int)(avg_other);
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
+    
+    
 }
