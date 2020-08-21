@@ -6,14 +6,14 @@ public class Note {
     private int data;
     private Note nexNote;
 
+    public Note(int data) {
+        this(null, data, null);
+    }
+
     public Note(Note previousNote, int data, Note nexNote) {
         this.previousNote = previousNote;
         this.data = data;
         this.nexNote = nexNote;
-    }
-
-    public Note(int data) {
-        this(null, data, null);
     }
 
     public Note getPreviousNote() {
@@ -40,11 +40,24 @@ public class Note {
         this.nexNote = nexNote;
     }
 
-    public String printNextNotes() {
-        return "Note{" + "data=" + data + ", nexNote=" + nexNote + '}';
+    public String getNextNotes() {
+        String s = data + ",";
+        Note next = nexNote;
+        while (next != null) {
+            s += next.getData() + ",";
+            next = next.getNexNote();
+        }
+        return s;
     }
 
-    public String printPreviousNotes() {
-        return "Note{" + "data=" + data + ", nexNote=" + previousNote + '}';
+    public String getPreviousNotes() {
+        String s = data + ",";
+        Note previous = previousNote;
+        while (previous != null) {
+            s += previous.getData() + ",";
+            previous = previous.getPreviousNote();
+        }
+        return s;
     }
+
 }
