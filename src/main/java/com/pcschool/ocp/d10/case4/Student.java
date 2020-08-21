@@ -28,10 +28,10 @@ public class Student {
         return scores;
     }
 
-    public Set<Exam> addScores(int score) {
+    public Student addScores(int score) {
         Exam exam = new Exam(score);
         scores.add(exam);
-        return scores;
+        return this;
     }
 
     @Override
