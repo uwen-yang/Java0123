@@ -2,6 +2,8 @@ package com.pcschool.ocp.d10.case4;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.function.ToIntFunction;
+import java.util.stream.Stream;
 
 public class School {
     public static void main(String[] args) {
@@ -17,5 +19,21 @@ public class School {
         
         System.out.println(s1);
         System.out.println(s2);
+        
+        //全班成績平均
+        Set<Student> students = new LinkedHashSet<>();
+        students.add(s1);
+        students.add(s2);
+        System.out.println(students);
+        
+        //以每人的最高分來求平均?
+        double avg = students.stream()
+                             .mapToInt(s -> s.getScores().stream().mapToInt(e -> e.getScore()).summaryStatistics().getMax())
+                             .average()
+                             .getAsDouble();
+        System.out.println(avg);
+        
+        //在 Exam 中取出最高分的方法
+       
     }
 }
