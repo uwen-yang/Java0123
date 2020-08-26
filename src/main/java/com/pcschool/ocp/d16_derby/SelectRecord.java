@@ -23,7 +23,7 @@ public class SelectRecord {
         ResultSet rs = stmt.executeQuery(sql);
         //將資料輪循後印出
         System.out.printf("%4s %10s %4s %30s\n","序號","書名","價格","建立時間");
-        System.out.printf("----------------------------------------------\n");
+        System.out.printf("-----------------------------------------------\n");
         while (rs.next()) {
             int id = rs.getInt("id");
             String bename = rs.getString("bename");
