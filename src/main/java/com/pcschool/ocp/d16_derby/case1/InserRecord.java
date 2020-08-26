@@ -1,4 +1,4 @@
-package com.pcschool.ocp.d16_derby;
+package com.pcschool.ocp.d16_derby.case1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
