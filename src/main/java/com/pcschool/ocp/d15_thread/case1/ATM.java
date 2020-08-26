@@ -1,7 +1,5 @@
 package com.pcschool.ocp.d15_thread.case1;
 
-import com.pcschool.ocp.d15_thread.Withdraw;
-
 
 public class ATM {
     public synchronized static void main(String[] args) {

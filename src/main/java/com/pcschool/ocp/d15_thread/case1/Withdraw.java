@@ -1,4 +1,4 @@
-package com.pcschool.ocp.d15_thread;
+package com.pcschool.ocp.d15_thread.case1;
 
 import com.pcschool.ocp.d01.Account;
 
