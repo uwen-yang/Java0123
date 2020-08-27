@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.pcschool.ocp.d18_nio.case3;
 
-/**
- *
- * @author MB-study
- */
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
 public class FileCopyDelete {
-    
+    public static void main(String[] args) throws Exception{
+       Path source = Paths.get("src\\main\\java\\com\\pcschool\\ocp\\d18_nio\\a.txt");
+       Path target = Paths.get("src\\main\\java\\com\\pcschool\\ocp\\d18_nio\\b.txt");
+       Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
+       Files.delete(source);
+        System.out.println("完成!");
+    }   
 }
